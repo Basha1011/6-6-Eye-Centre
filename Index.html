@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مركز 6/6 للعيون - أمام محطة مترو المعصرة">
+  <meta name="theme-color" content="#102d59">
+  <title>مركز 6/6 للعيون</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f3f6fb;
+      color: #183052;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      margin: auto;
+      padding: 24px 18px;
+    }
+
+    .header {
+      background: linear-gradient(145deg, #102d59, #1756a0);
+      color: white;
+      text-align: center;
+      padding: 38px 20px 42px;
+      border-radius: 0 0 32px 32px;
+    }
+
+    .logo {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 15px;
+      border: 2px solid rgba(255,255,255,.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: -3px;
+      background: rgba(255,255,255,.12);
+    }
+
+    .header h1 {
+      margin: 8px 0;
+      font-size: 29px;
+    }
+
+    .header p {
+      margin: 5px 0;
+      color: #e3edff;
+      font-size: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px 20px;
+      margin-top: 18px;
+      border-radius: 20px;
+      box-shadow: 0 5px 22px rgba(20,50,90,.07);
+    }
+
+    .card h2 {
+      color: #174b88;
+      font-size: 19px;
+      margin: 0 0 13px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 12px 0;
+      font-size: 15px;
+    }
+
+    .info-icon {
+      background: #eaf2ff;
+      color: #1756a0;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 13px;
+      border-radius: 13px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .whatsapp {
+      background: #168b55;
+    }
+
+    .call {
+      background: #1756a0;
+    }
+
+    .location {
+      background: #eaf2ff;
+      color: #174b88;
+      border: 1px solid #d4e2f7;
+    }
+
+    .footer {
+      text-align: center;
+      color: #7a899d;
+      font-size: 13px;
+      padding: 25px 10px 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">6/6</div>
+    <h1>مركز 6/6 للعيون</h1>
+    <p>رعايتك تبدأ برؤية أوضح</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>بيانات المركز</h2>
+
+      <div class="info">
+        <div class="info-icon">📍</div>
+        <div>أمام محطة مترو المعصرة</div>
+      </div>
+
+      <div class="info">
+        <div class="info-icon">🕒</div>
+        <div>
+          مواعيد العمل:
+          <br>
+          السبت والثلاثاء - الساعة 7 مساءً
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>تواصل معنا</h2>
+
+      <div class="info">
+        <div class="info-icon">☎️</div>
+        <div dir="ltr">01018226300</div>
+      </div>
+
+      <div class="info">
+        <div class="info-icon">☎️</div>
+        <div dir="ltr">01200869575</div>
+      </div>
+
+      <div class="buttons">
+        <a class="btn whatsapp"
+           href="https://wa.me/201018226300">
+          تواصل عبر واتساب
+        </a>
+
+        <a class="btn call"
+           href="tel:01018226300">
+          اتصل بالمركز
+        </a>
+
+        <a class="btn location"
+           href="https://www.google.com/maps/search/?api=1&query=Maasara+Metro+Station+Cairo">
+          موقع المركز على الخريطة 📍
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      مركز 6/6 للعيون
+      <br>
+      نسعد بتواصلكم معنا
+    </footer>
+
+  </main>
+
+</body>
+</html>

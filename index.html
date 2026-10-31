@@ -2,298 +2,203 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مركز 6/6 للعيون</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز 6/6 للعيون</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: Tahoma, Arial, sans-serif;
-  background: linear-gradient(180deg, #eaf5ff, #ffffff);
-  color: #12345b;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f4f8fc;
+      color: #12345a;
+      text-align: center;
+    }
 
-/* صورة الهيدر كاملة بدون قص */
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-.container {
-  max-width: 520px;
-  margin: auto;
-  padding: 20px 14px 30px;
-}
+    .main {
+      max-width: 600px;
+      margin: auto;
+      padding: 28px 16px 35px;
+    }
 
-.section-title {
-  font-size: 21px;
-  font-weight: bold;
-  margin: 12px 0 28px;
-  color: #123c78;
-}
+    h2 {
+      color: #123b70;
+      font-size: 23px;
+      margin: 5px 0 30px;
+      font-weight: bold;
+    }
 
-/* توزيع الدوائر */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 12px;
-  row-gap: 28px;
-}
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 15px;
+      justify-items: center;
+      margin-bottom: 35px;
+    }
 
-.service {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  min-width: 0;
-  padding: 4px;
-}
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #163b67;
+      font-size: 17px;
+      font-weight: bold;
+      gap: 10px;
+    }
 
-.circle {
-  width: 145px;
-  height: 145px;
-  max-width: 100%;
-  border-radius: 50%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 7px 20px #12345b20;
-  transition: transform 0.2s;
-}
+    .circle {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 18px rgba(20, 55, 95, 0.13);
+      overflow: hidden;
+      padding: 23px;
+      transition: transform 0.2s ease;
+    }
 
-.service:active .circle {
-  transform: scale(0.94);
-}
+    .service:active .circle {
+      transform: scale(0.95);
+    }
 
-.circle svg {
-  width: 78px;
-  height: 78px;
-}
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
-.service-name {
-  margin-top: 13px;
-  font-size: 19px;
-  font-weight: bold;
-  color: #173d70;
-}
+    .whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 430px;
+      min-height: 65px;
+      margin: 0 auto;
+      padding: 12px 18px;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #25d366, #128c50);
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(18, 140, 80, 0.22);
+    }
 
-/* ألوان الدوائر */
-.vodafone .circle {
-  border: 3px solid #ed1c24;
-}
+    .whatsapp img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
 
-.instapay .circle {
-  border: 3px solid #6334a5;
-}
+    footer {
+      background: #102e52;
+      color: white;
+      padding: 19px 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
 
-.location .circle {
-  border: 3px solid #1680d5;
-}
+    @media (max-width: 380px) {
+      .circle {
+        width: 125px;
+        height: 125px;
+        padding: 20px;
+      }
 
-/* شعار فودافون */
-.vodafone-mark {
-  width: 76px;
-  height: 76px;
-  border: 13px solid #e60000;
-  border-radius: 50%;
-  position: relative;
-}
+      h2 {
+        font-size: 20px;
+      }
 
-.vodafone-mark::after {
-  content: "";
-  position: absolute;
-  width: 23px;
-  height: 23px;
-  background: white;
-  border-radius: 50%;
-  top: -8px;
-  right: -8px;
-}
+      .service {
+        font-size: 15px;
+      }
 
-/* شعار InstaPay */
-.instapay-mark {
-  font-family: Arial, sans-serif;
-  font-weight: 900;
-  font-size: 23px;
-  font-style: italic;
-  color: #54249a;
-  letter-spacing: -1.5px;
-}
-
-.instapay-mark span {
-  color: #f47721;
-}
-
-/* زر واتساب */
-.whatsapp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
-  min-height: 115px;
-  margin-top: 35px;
-  border-radius: 70px;
-  background: linear-gradient(135deg, #20b967, #087b43);
-  color: white;
-  text-decoration: none;
-  font-size: 23px;
-  font-weight: bold;
-  box-shadow: 0 7px 18px #168c5540;
-  transition: transform 0.2s;
-}
-
-.whatsapp:active {
-  transform: scale(0.97);
-}
-
-.whatsapp svg {
-  width: 57px;
-  height: 57px;
-  fill: white;
-}
-
-.footer {
-  margin-top: 20px;
-  padding: 22px 10px;
-  background: #12345b;
-  color: white;
-  font-size: 14px;
-}
-
-@media (max-width: 380px) {
-  .circle {
-    width: 125px;
-    height: 125px;
-  }
-
-  .circle svg {
-    width: 68px;
-    height: 68px;
-  }
-
-  .service-name {
-    font-size: 17px;
-  }
-
-  .section-title {
-    font-size: 19px;
-  }
-}
-</style>
+      .whatsapp {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- صورة الخلفية وشعار المركز -->
-<header class="hero">
-  <img src="background.png" alt="مركز 6/6 للعيون">
-</header>
-
-<main class="container">
-
-<h2 class="section-title">وسائل الدفع ومواقع الفروع</h2>
-
-<div class="grid">
-
-<!-- Vodafone Cash -->
-<a class="service vodafone"
-href="https://vf.eg/vfcash?id=mt&qrId=vZlyRr"
-target="_blank" rel="noopener">
-
-  <div class="circle">
-    <div class="vodafone-mark"></div>
+  <div class="hero">
+    <img src="background.png" alt="مركز 6/6 للعيون">
   </div>
 
-  <span class="service-name">Vodafone Cash</span>
-</a>
+  <main class="main">
 
-<!-- InstaPay -->
-<a class="service instapay"
-href="https://ipn.eg/S/basha.grey/instapay/4ihKLN"
-target="_blank" rel="noopener">
+    <h2>وسائل الدفع ومواقع الفروع</h2>
 
-  <div class="circle">
-    <div class="instapay-mark">
-      INSTA<span>»</span>PAY
+    <div class="services">
+
+      <a class="service"
+         href="https://vf.eg/vfcash?id=mt&qrId=vZlyRr"
+         target="_blank" rel="noopener">
+        <div class="circle">
+          <img src="vodafone.jpg" alt="Vodafone">
+        </div>
+        <span>Vodafone Cash</span>
+      </a>
+
+      <a class="service"
+         href="https://ipn.eg/S/basha.grey/instapay/4ihKLN"
+         target="_blank" rel="noopener">
+        <div class="circle">
+          <img src="instapay.png" alt="InstaPay">
+        </div>
+        <span>InstaPay</span>
+      </a>
+
+      <a class="service"
+         href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
+         target="_blank" rel="noopener">
+        <div class="circle">
+          <img src="google.svg.webp" alt="Google Maps">
+        </div>
+        <span>فرع المعصرة</span>
+      </a>
+
+      <a class="service"
+         href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
+         target="_blank" rel="noopener">
+        <div class="circle">
+          <img src="google.svg.webp" alt="Google Maps">
+        </div>
+        <span>فرع الشوبك</span>
+      </a>
+
     </div>
-  </div>
 
-  <span class="service-name">InstaPay</span>
-</a>
+    <a class="whatsapp"
+       href="https://wa.me/201018226300"
+       target="_blank" rel="noopener">
+      <img src="whatsapp.png" alt="WhatsApp">
+      <span>تواصل معنا عبر WhatsApp</span>
+    </a>
 
-<!-- المعصرة -->
-<a class="service location"
-href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
-target="_blank" rel="noopener">
+  </main>
 
-  <div class="circle">
-    <svg viewBox="0 0 64 80">
-      <path fill="#4285F4"
-        d="M32 2C15 2 4 14 4 29c0 20 28 48 28 48s28-28 28-48C60 14 49 2 32 2z"/>
-      <path fill="#34A853"
-        d="M32 2C15 2 4 14 4 29c0 8 5 18 11 27l17-27z"/>
-      <path fill="#FBBC04"
-        d="M15 56C22 67 32 77 32 77s15-15 23-30L32 29z"/>
-      <path fill="#EA4335"
-        d="M4 29c0-15 11-27 28-27v27L15 56C9 47 4 37 4 29z"/>
-      <circle cx="32" cy="29" r="12" fill="white"/>
-    </svg>
-  </div>
-
-  <span class="service-name">المعصرة</span>
-</a>
-
-<!-- الشوبك -->
-<a class="service location"
-href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
-target="_blank" rel="noopener">
-
-  <div class="circle">
-    <svg viewBox="0 0 64 80">
-      <path fill="#4285F4"
-        d="M32 2C15 2 4 14 4 29c0 20 28 48 28 48s28-28 28-48C60 14 49 2 32 2z"/>
-      <path fill="#34A853"
-        d="M32 2C15 2 4 14 4 29c0 8 5 18 11 27l17-27z"/>
-      <path fill="#FBBC04"
-        d="M15 56C22 67 32 77 32 77s15-15 23-30L32 29z"/>
-      <path fill="#EA4335"
-        d="M4 29c0-15 11-27 28-27v27L15 56C9 47 4 37 4 29z"/>
-      <circle cx="32" cy="29" r="12" fill="white"/>
-    </svg>
-  </div>
-
-  <span class="service-name">الشوبك</span>
-</a>
-
-</div>
-
-<!-- WhatsApp -->
-<a class="whatsapp"
-href="https://wa.me/201018226300"
-target="_blank" rel="noopener">
-
-  <svg viewBox="0 0 24 24">
-    <path d="M12.04 2C6.52 2 2.03 6.49 2.03 12.01c0 1.77.47 3.49 1.37 5.01L2 22l5.12-1.34a10 10 0 0 0 4.91 1.29h.01c5.52 0 10.01-4.49 10.01-10.01A9.95 9.95 0 0 0 19.1 4.9 9.94 9.94 0 0 0 12.04 2zm0 18.25h-.01a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.04.8.81-2.97-.2-.31a8.23 8.23 0 1 1 6.94 3.81zm4.52-6.16c-.25-.13-1.48-.73-1.71-.81-.23-.09-.4-.13-.56.13-.17.25-.65.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.52.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.41-.56-.42h-.48c-.17 0-.43.06-.65.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.13.17 1.75 2.67 4.24 3.75.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.48-.61 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.1-.23-.16-.48-.29z"/>
-  </svg>
-
-  <span>تواصل معنا عبر WhatsApp</span>
-</a>
-
-</main>
-
-<footer class="footer">
-مركز 6/6 للعيون .. دائماً في خدمتكم
-</footer>
+  <footer>
+    مركز 6/6 للعيون .. دائماً في خدمتكم
+  </footer>
 
 </body>
 </html>

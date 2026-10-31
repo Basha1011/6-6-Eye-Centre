@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مركز 6/6 للعيون - أمام محطة مترو المعصرة">
-  <meta name="theme-color" content="#102d59">
   <title>مركز 6/6 للعيون</title>
 
   <style>
@@ -16,193 +14,161 @@
     body {
       margin: 0;
       font-family: Tahoma, Arial, sans-serif;
-      background: #f3f6fb;
-      color: #183052;
-      line-height: 1.8;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 480px;
-      margin: auto;
-      padding: 24px 18px;
-    }
-
-    .header {
-      background: linear-gradient(145deg, #102d59, #1756a0);
-      color: white;
+      background: #f2f7fc;
+      color: #17345a;
       text-align: center;
-      padding: 38px 20px 42px;
-      border-radius: 0 0 32px 32px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(8, 42, 91, 0.25), rgba(8, 42, 91, 0.25)),
+        url("background.png") center/cover no-repeat;
+      padding: 35px 15px 40px;
     }
 
     .logo {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 15px;
-      border: 2px solid rgba(255,255,255,.8);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      font-weight: bold;
-      letter-spacing: -3px;
-      background: rgba(255,255,255,.12);
-    }
-
-    .header h1 {
-      margin: 8px 0;
-      font-size: 29px;
-    }
-
-    .header p {
-      margin: 5px 0;
-      color: #e3edff;
-      font-size: 15px;
-    }
-
-    .card {
+      width: 135px;
+      height: 135px;
+      object-fit: contain;
       background: white;
-      padding: 22px 20px;
-      margin-top: 18px;
-      border-radius: 20px;
-      box-shadow: 0 5px 22px rgba(20,50,90,.07);
+      border-radius: 50%;
+      padding: 7px;
+      box-shadow: 0 4px 18px #0002;
     }
 
-    .card h2 {
-      color: #174b88;
-      font-size: 19px;
-      margin: 0 0 13px;
+    h1 {
+      color: white;
+      font-size: 27px;
+      margin: 16px 0 7px;
+      text-shadow: 0 2px 5px #17345a;
     }
 
-    .info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 12px 0;
+    .subtitle {
+      color: white;
       font-size: 15px;
+      text-shadow: 0 1px 4px #17345a;
     }
 
-    .info-icon {
-      background: #eaf2ff;
-      color: #1756a0;
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 20px 16px 35px;
     }
 
-    .buttons {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
+    .section-title {
+      font-size: 19px;
+      margin: 12px 0 15px;
+      color: #123d70;
     }
 
     .btn {
       display: block;
-      text-align: center;
       text-decoration: none;
-      padding: 13px;
-      border-radius: 13px;
       color: white;
-      font-size: 16px;
+      padding: 16px 12px;
+      margin: 12px 0;
+      border-radius: 13px;
+      font-size: 17px;
       font-weight: bold;
+      box-shadow: 0 3px 9px #00000012;
+      transition: 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .vodafone {
+      background: #e60000;
+    }
+
+    .instapay {
+      background: #6435a8;
     }
 
     .whatsapp {
-      background: #168b55;
+      background: #168c55;
     }
 
-    .call {
-      background: #1756a0;
+    .maps {
+      background: #1765a9;
     }
 
-    .location {
-      background: #eaf2ff;
-      color: #174b88;
-      border: 1px solid #d4e2f7;
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 15px;
+      margin: 18px 0;
+      box-shadow: 0 3px 14px #163c6412;
     }
 
     .footer {
-      text-align: center;
-      color: #7a899d;
+      background: #12345b;
+      color: white;
+      padding: 17px;
       font-size: 13px;
-      padding: 25px 10px 12px;
     }
   </style>
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="logo">6/6</div>
+  <header class="hero">
+    <img class="logo" src="logo.jpg" alt="شعار مركز 6/6 للعيون">
+
     <h1>مركز 6/6 للعيون</h1>
-    <p>رعايتك تبدأ برؤية أوضح</p>
+    <div class="subtitle">رعايتكم لصحة عيونكم تهمنا</div>
   </header>
 
   <main class="container">
 
     <section class="card">
-      <h2>بيانات المركز</h2>
+      <h2 class="section-title">وسائل الدفع الإلكتروني</h2>
 
-      <div class="info">
-        <div class="info-icon">📍</div>
-        <div>أمام محطة مترو المعصرة</div>
-      </div>
+      <a class="btn vodafone"
+         href="https://vf.eg/vfcash?id=mt&qrId=vZlyRr"
+         target="_blank" rel="noopener">
+        الدفع عن طريق فودافون كاش
+      </a>
 
-      <div class="info">
-        <div class="info-icon">🕒</div>
-        <div>
-          مواعيد العمل:
-          <br>
-          السبت والثلاثاء - الساعة 7 مساءً
-        </div>
-      </div>
+      <a class="btn instapay"
+         href="https://ipn.eg/S/basha.grey/instapay/4ihKLN"
+         target="_blank" rel="noopener">
+        الدفع عن طريق InstaPay
+      </a>
     </section>
 
     <section class="card">
-      <h2>تواصل معنا</h2>
+      <h2 class="section-title">تواصل معنا</h2>
 
-      <div class="info">
-        <div class="info-icon">☎️</div>
-        <div dir="ltr">01018226300</div>
-      </div>
-
-      <div class="info">
-        <div class="info-icon">☎️</div>
-        <div dir="ltr">01200869575</div>
-      </div>
-
-      <div class="buttons">
-        <a class="btn whatsapp"
-           href="https://wa.me/201018226300">
-          تواصل عبر واتساب
-        </a>
-
-        <a class="btn call"
-           href="tel:01018226300">
-          اتصل بالمركز
-        </a>
-
-        <a class="btn location"
-           href="https://www.google.com/maps/search/?api=1&query=Maasara+Metro+Station+Cairo">
-          موقع المركز على الخريطة 📍
-        </a>
-      </div>
+      <a class="btn whatsapp"
+         href="https://wa.me/201018226300"
+         target="_blank" rel="noopener">
+        تواصل معنا عبر WhatsApp
+      </a>
     </section>
 
-    <footer class="footer">
-      مركز 6/6 للعيون
-      <br>
-      نسعد بتواصلكم معنا
-    </footer>
+    <section class="card">
+      <h2 class="section-title">مواقع فروع المركز</h2>
+
+      <a class="btn maps"
+         href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
+         target="_blank" rel="noopener">
+        فرع المعصرة - الموقع على الخريطة
+      </a>
+
+      <a class="btn maps"
+         href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
+         target="_blank" rel="noopener">
+        فرع الشوبك - الموقع على الخريطة
+      </a>
+    </section>
 
   </main>
+
+  <footer class="footer">
+    جميع الحقوق محفوظة © مركز 6/6 للعيون
+  </footer>
 
 </body>
 </html>

@@ -4,7 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>مركز 6/6 للعيون</title>
+
+  <!-- الخط العربي Alexandria -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -20,7 +26,7 @@
       text-align: center;
     }
 
-    /* العنوان الرئيسي */
+    /* الشريط العلوي */
     .top-banner {
       width: 100%;
       min-height: 80px;
@@ -33,16 +39,19 @@
       box-shadow: 0 3px 10px rgba(0, 35, 90, 0.20);
     }
 
+    /* اسم المركز */
     .top-banner h1 {
       margin: 0;
       color: #fff;
-      font-family: Tahoma, Arial, sans-serif;
-      font-size: clamp(24px, 4.5vw, 35px);
-      font-weight: 900;
-      letter-spacing: 0.3px;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(23px, 4.5vw, 34px);
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.5;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
+    /* صورة الخلفية */
     .hero img {
       display: block;
       width: 100%;
@@ -62,6 +71,7 @@
       font-weight: bold;
     }
 
+    /* ترتيب الأيقونات */
     .services {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -81,6 +91,7 @@
       gap: 10px;
     }
 
+    /* الدوائر */
     .circle {
       width: 145px;
       height: 145px;
@@ -105,12 +116,13 @@
       object-fit: contain;
     }
 
-    /* تصغير شعار خرائط جوجل فقط */
+    /* تصغير شعار خرائط جوجل 30% */
     .circle .google-logo {
       width: 70%;
       height: 70%;
     }
 
+    /* زر واتساب */
     .whatsapp {
       display: flex;
       align-items: center;
@@ -136,6 +148,7 @@
       object-fit: contain;
     }
 
+    /* الفوتر */
     footer {
       background: #102e52;
       color: white;
@@ -144,6 +157,7 @@
       font-weight: bold;
     }
 
+    /* ضبط العرض على الموبايل */
     @media (max-width: 380px) {
       .circle {
         width: 125px;
@@ -172,10 +186,12 @@
 
 <body>
 
+  <!-- اسم المركز -->
   <header class="top-banner">
     <h1>مركز 6/6 للعيون</h1>
   </header>
 
+  <!-- صورة الخلفية -->
   <div class="hero">
     <img src="background.png" alt="مركز 6/6 للعيون">
   </div>
@@ -186,6 +202,7 @@
 
     <div class="services">
 
+      <!-- Vodafone -->
       <a class="service"
          href="https://vf.eg/vfcash?id=mt&qrId=vZlyRr"
          target="_blank" rel="noopener">
@@ -194,6 +211,7 @@
         </div>
       </a>
 
+      <!-- InstaPay -->
       <a class="service"
          href="https://ipn.eg/S/basha.grey/instapay/4ihKLN"
          target="_blank" rel="noopener">
@@ -202,6 +220,7 @@
         </div>
       </a>
 
+      <!-- المعصرة -->
       <a class="service"
          href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
          target="_blank" rel="noopener">
@@ -211,6 +230,7 @@
         <span>المعصرة</span>
       </a>
 
+      <!-- الشوبك -->
       <a class="service"
          href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
          target="_blank" rel="noopener">
@@ -222,6 +242,7 @@
 
     </div>
 
+    <!-- واتساب -->
     <a class="whatsapp"
        href="https://wa.me/201018226300"
        target="_blank" rel="noopener">

@@ -20,6 +20,27 @@
       text-align: center;
     }
 
+    /* الشريط العلوي باسم المركز */
+    .top-banner {
+      width: 100%;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 10px;
+      background: linear-gradient(120deg, #061e50, #0755ad, #061e50);
+      border-bottom: 5px solid #20a7ed;
+      box-shadow: 0 4px 12px rgba(0, 35, 90, 0.25);
+    }
+
+    .top-banner h1 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(25px, 5vw, 42px);
+      font-weight: 900;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
     .hero img {
       display: block;
       width: 100%;
@@ -133,12 +154,22 @@
       .whatsapp {
         font-size: 16px;
       }
+
+      .top-banner {
+        min-height: 85px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- اسم المركز أعلى الصفحة -->
+  <header class="top-banner">
+    <h1>مركز 6/6 للعيون</h1>
+  </header>
+
+  <!-- صورة الخلفية الأصلية -->
   <div class="hero">
     <img src="background.png" alt="مركز 6/6 للعيون">
   </div>
@@ -149,15 +180,17 @@
 
     <div class="services">
 
+      <!-- Vodafone Cash -->
       <a class="service"
          href="https://vf.eg/vfcash?id=mt&qrId=vZlyRr"
          target="_blank" rel="noopener">
         <div class="circle">
-          <img src="vodafone.jpg" alt="Vodafone">
+          <img src="vodafone.png" alt="Vodafone">
         </div>
         <span>Vodafone Cash</span>
       </a>
 
+      <!-- InstaPay -->
       <a class="service"
          href="https://ipn.eg/S/basha.grey/instapay/4ihKLN"
          target="_blank" rel="noopener">
@@ -167,6 +200,7 @@
         <span>InstaPay</span>
       </a>
 
+      <!-- فرع المعصرة -->
       <a class="service"
          href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
          target="_blank" rel="noopener">
@@ -176,6 +210,7 @@
         <span>فرع المعصرة</span>
       </a>
 
+      <!-- فرع الشوبك -->
       <a class="service"
          href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
          target="_blank" rel="noopener">
@@ -187,6 +222,7 @@
 
     </div>
 
+    <!-- WhatsApp -->
     <a class="whatsapp"
        href="https://wa.me/201018226300"
        target="_blank" rel="noopener">

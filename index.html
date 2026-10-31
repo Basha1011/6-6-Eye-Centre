@@ -38,39 +38,22 @@
       border-bottom: 4px solid #16a5ed;
     }
 
-    /* حركة النبض لاسم المركز */
-    @keyframes textPulse {
-      0%, 100% {
-        transform: scale(1);
-        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
-      }
-
-      50% {
-        transform: scale(1.03);
-        text-shadow:
-          0 0 15px rgba(255, 255, 255, 0.6),
-          0 0 25px rgba(22, 128, 213, 0.4);
-      }
-    }
-
+    /* اسم المركز: ثابت مع إضاءة */
     .brand-name {
       font-family: 'Changa', sans-serif;
-      font-size: clamp(23px, 4.5vw, 34px);
+      font-size: 31px;
       font-weight: 800;
       color: #ffffff;
       margin: 0;
       display: inline-block;
       line-height: 1.5;
-      animation: textPulse 3.5s infinite ease-in-out;
+      text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.2),
+        0 0 15px rgba(255, 255, 255, 0.6),
+        0 0 25px rgba(22, 128, 213, 0.4);
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .brand-name {
-        animation: none;
-      }
-    }
-
-    /* صورة المركز الرئيسية */
+    /* الصورة الرئيسية */
     .hero-image {
       width: 100%;
       display: block;
@@ -123,7 +106,7 @@
       object-fit: contain;
     }
 
-    /* تصغير شعار خرائط جوجل */
+    /* شعار Google Maps: أصغر بنسبة 30% */
     .circle .google-logo {
       width: 70%;
       height: 70%;
@@ -184,6 +167,10 @@
 
     /* الهواتف الصغيرة */
     @media (max-width: 380px) {
+      .brand-name {
+        font-size: 29px;
+      }
+
       .circle {
         width: 125px;
         height: 125px;

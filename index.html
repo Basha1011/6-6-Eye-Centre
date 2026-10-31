@@ -80,13 +80,13 @@
       justify-items: center;
     }
 
-    /* الدوائر */
+    /* الدوائر بدون إطار أزرق */
     .circle {
       width: 145px;
       height: 145px;
       border-radius: 50%;
       background: #ffffff;
-      border: 3px solid #087de0;
+      border: none;
       box-shadow: 0 4px 13px rgba(0, 91, 180, 0.18);
       display: flex;
       align-items: center;
@@ -106,22 +106,26 @@
       object-fit: contain;
     }
 
-    /* شعار Google Maps: أصغر بنسبة 30% */
+    /* تصغير شعار Google Maps بنسبة 30% إضافية */
     .circle .google-logo {
-      width: 70%;
-      height: 70%;
+      width: 49%;
+      height: 49%;
     }
 
-    /* أسماء الفروع */
-    .branch-circle {
+    /* حاوية الفرع */
+    .branch-item {
+      display: flex;
       flex-direction: column;
-      gap: 5px;
+      align-items: center;
+      gap: 8px;
     }
 
+    /* اسم الفرع أسفل الدائرة */
     .branch-name {
       font-size: 19px;
       font-weight: bold;
       color: #092d68;
+      margin: 0;
     }
 
     /* زر واتساب */
@@ -233,28 +237,32 @@
     </a>
 
     <!-- فرع المعصرة -->
-    <a
-      class="circle branch-circle"
-      href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
-      target="_blank"
-      rel="noopener"
-      aria-label="موقع فرع المعصرة"
-    >
-      <img class="google-logo" src="google.svg.webp" alt="Google Maps">
+    <div class="branch-item">
+      <a
+        class="circle"
+        href="https://maps.app.goo.gl/75ccxhW54AAD17ep6?g_st=ac"
+        target="_blank"
+        rel="noopener"
+        aria-label="موقع فرع المعصرة"
+      >
+        <img class="google-logo" src="google.svg.webp" alt="Google Maps">
+      </a>
       <span class="branch-name">المعصرة</span>
-    </a>
+    </div>
 
     <!-- فرع الشوبك -->
-    <a
-      class="circle branch-circle"
-      href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
-      target="_blank"
-      rel="noopener"
-      aria-label="موقع فرع الشوبك"
-    >
-      <img class="google-logo" src="google.svg.webp" alt="Google Maps">
+    <div class="branch-item">
+      <a
+        class="circle"
+        href="https://maps.app.goo.gl/EQ6ktwVcbLgLNaB29"
+        target="_blank"
+        rel="noopener"
+        aria-label="موقع فرع الشوبك"
+      >
+        <img class="google-logo" src="google.svg.webp" alt="Google Maps">
+      </a>
       <span class="branch-name">الشوبك</span>
-    </a>
+    </div>
 
   </div>
 

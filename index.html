@@ -69,6 +69,23 @@
       margin: 25px 10px 20px;
     }
 
+    /* عنوان وسائل الدفع */
+
+    .payment-title {
+      font-weight: 800;
+      text-shadow: 0 2px 4px rgba(9, 45, 104, 0.15);
+    }
+
+    .payment-title::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 3px;
+      background: #16a5ed;
+      border-radius: 10px;
+      margin: 7px auto 0;
+    }
+
     /* عنوان مواقع الفروع */
 
     .branches-title {
@@ -308,7 +325,7 @@
 
   <!-- وسائل الدفع -->
 
-  <h2 class="section-title">وسائل الدفع</h2>
+  <h2 class="section-title payment-title">وسائل الدفع</h2>
 
   <section class="payment-grid">
 

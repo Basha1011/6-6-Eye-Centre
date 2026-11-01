@@ -128,7 +128,7 @@
       justify-content: center;
       overflow: hidden;
       text-decoration: none;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .circle:active {
@@ -164,7 +164,7 @@
       gap: 12px;
       text-decoration: none;
       color: #092d68;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .branch-card:active {
@@ -215,6 +215,20 @@
       font-weight: 400;
       flex-shrink: 0;
       direction: ltr;
+    }
+
+    /* تأثير Hover للماوس فقط */
+
+    @media (hover: hover) and (pointer: fine) {
+      .circle:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 91, 180, 0.22);
+      }
+
+      .branch-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 91, 180, 0.20);
+      }
     }
 
     /* زر واتساب */
@@ -418,6 +432,18 @@
   <footer>
     مركز 6/6 للعيون .. دائماً في خدمتكم
   </footer>
+
+  <script>
+    // اهتزاز خفيف عند الضغط على دوائر الدفع وكروت الفروع
+
+    document.querySelectorAll('.circle, .branch-card').forEach(function(element) {
+      element.addEventListener('click', function() {
+        if (navigator.vibrate) {
+          navigator.vibrate(15);
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

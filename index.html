@@ -59,6 +59,16 @@
       border-radius: 0 0 20px 20px;
     }
 
+    /* عناوين الأقسام */
+
+    .section-title {
+      font-family: 'Changa', sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      color: #092d68;
+      margin: 25px 10px 20px;
+    }
+
     /* دوائر وسائل الدفع */
 
     .payment-grid {
@@ -96,27 +106,33 @@
       object-fit: contain;
     }
 
+    /* عنوان مواقع الفروع */
+
+    .branches-title {
+      margin-top: 35px;
+    }
+
     /* بطاقات الفروع */
 
     .branches-container {
       width: calc(100% - 40px);
       max-width: 600px;
-      margin: 35px auto 0;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
 
     .branch-card {
-      min-height: 90px;
-      padding: 8px 16px;
+      min-height: 84px;
+      padding: 8px 18px;
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 24px;
       box-shadow: 0 5px 16px rgba(0, 91, 180, 0.14);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       color: #092d68;
       transition: transform 0.2s ease;
@@ -129,14 +145,14 @@
     .branch-info {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       min-width: 0;
       text-align: right;
     }
 
     .branch-info img {
-      width: 34px;
-      height: 34px;
+      width: 42px;
+      height: 42px;
       object-fit: contain;
       flex-shrink: 0;
     }
@@ -149,23 +165,23 @@
 
     .branch-name {
       font-family: 'Changa', sans-serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
       color: #092d68;
-      line-height: 1.35;
+      line-height: 1.25;
     }
 
     .branch-description {
       font-family: 'Changa', sans-serif;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 600;
       color: #183957;
-      line-height: 1.35;
+      line-height: 1.25;
     }
 
     .branch-arrow {
       color: #1680bd;
-      font-size: 35px;
+      font-size: 43px;
       font-family: Arial, sans-serif;
       font-weight: 400;
       flex-shrink: 0;
@@ -224,9 +240,13 @@
         height: 125px;
       }
 
+      .section-title {
+        font-size: 21px;
+      }
+
       .branch-card {
-        min-height: 84px;
-        padding: 8px 12px;
+        min-height: 74px;
+        padding: 12px;
         gap: 7px;
       }
 
@@ -235,20 +255,20 @@
       }
 
       .branch-info img {
-        width: 30px;
-        height: 30px;
+        width: 34px;
+        height: 34px;
       }
 
       .branch-name {
-        font-size: 19px;
+        font-size: 20px;
       }
 
       .branch-description {
-        font-size: 13px;
+        font-size: 14px;
       }
 
       .branch-arrow {
-        font-size: 32px;
+        font-size: 35px;
       }
 
       .whatsapp-button {
@@ -260,9 +280,13 @@
 
 <body>
 
+  <!-- الهيدر -->
+
   <header class="top-banner">
     <h1 class="brand-name">مركز 6/6 للعيون</h1>
   </header>
+
+  <!-- صورة المركز -->
 
   <img
     class="hero-image"
@@ -271,6 +295,8 @@
   >
 
   <!-- وسائل الدفع -->
+
+  <h2 class="section-title">وسائل الدفع</h2>
 
   <section class="payment-grid">
 
@@ -298,7 +324,11 @@
 
   <!-- مواقع الفروع -->
 
+  <h2 class="section-title branches-title">مواقع الفروع</h2>
+
   <section class="branches-container">
+
+    <!-- فرع المعصرة -->
 
     <a
       class="branch-card"
@@ -318,6 +348,8 @@
 
       <span class="branch-arrow">↗</span>
     </a>
+
+    <!-- فرع الشوبك -->
 
     <a
       class="branch-card"
